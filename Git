@@ -1,0 +1,118 @@
+**1. git init**
+Question: What does `git init` do?
+Answer: It initializes a new Git repository in the current directory by creating a .git folder.
+
+Scenario-Based Question: You have a folder with project files but no version control. How do you start tracking changes with Git?
+Answer: Run `git init` to initialize a local Git repository. Then use `git add` and `git commit` to start tracking files.
+
+---
+
+**2. git status**
+Question: What does `git status` display?
+Answer: It shows the state of the working directory and staging area — which files are staged, unstaged, or untracked.
+
+Scenario-Based Question: After editing files, you want to know which are staged and which are not. What command will you use?
+Answer: `git status`
+
+---
+
+**3. git add**
+Question: What is the use of `git add`?
+Answer: It stages changes (new or modified files) to be included in the next commit.
+
+Scenario-Based Question: You modified index.html but only want to commit this file. What command do you use?
+Answer: `git add index.html`
+
+---
+
+**4. git commit**
+Question: What does `git commit` do?
+Answer: It saves staged changes to the local repository with a message using -m.
+
+Scenario-Based Question: You staged 3 files and want to commit with a proper message. How?
+Answer: Run `git commit -m "Describe the changes"`
+
+---
+
+**5. git push**
+Question: What is `git push` used for?
+Answer: It uploads local commits to the remote repository.
+
+Scenario-Based Question: You committed locally. How to update your GitHub repository?
+Answer: `git push origin main` or `git push origin master`
+
+---
+
+**6. git reset**
+Question: What does `git reset` do?
+Answer: It undoes changes in various ways.
+
+* \--soft: Undo commit, keep changes staged
+* \--mixed: Undo commit, unstage changes
+* \--hard: Undo commit, delete changes
+
+Scenario-Based Question: You accidentally committed wrong files. How do you undo the commit but keep the files?
+Answer: `git reset --soft HEAD~1`
+
+---
+
+**7. git revert**
+Question: What does `git revert` do?
+Answer: It creates a new commit that undoes changes from a previous commit without modifying history.
+
+Scenario-Based Question: You want to undo a buggy commit on a shared branch. Which is safer: reset or revert?
+Answer: `git revert` is safer because it doesn’t rewrite commit history.
+
+---
+
+**8. git log**
+Question: What is the purpose of `git log`?
+Answer: It shows the commit history of the repository.
+
+Scenario-Based Question: You need the commit ID of a change made yesterday. What do you use?
+Answer: `git log`
+
+---
+
+**9. git show**
+Question: What does `git show` do?
+Answer: It displays detailed information about a specific commit, including the changes made.
+
+Scenario-Based Question: You want to see what changed in a particular commit. Which command?
+Answer: `git show <commit-id>`
+
+---
+
+**10. git branch**
+Question: What does `git branch` do?
+Answer: It lists, creates, or deletes branches in your repository.
+
+Scenario-Based Question: You want to test new code without affecting main. What do you do?
+Answer: Create a new branch with `git branch new-feature`, then switch with `git checkout new-feature`.
+
+---
+
+**Difference Between Git and Git Bash**
+
+Git is a version control system used for tracking code changes.
+Git Bash is a command-line shell that provides a Unix-like interface on Windows, allowing you to use Git commands and Unix utilities.
+
+Comparison:
+Git - Used to manage code versions
+Git Bash - Provides a terminal to run Git and Unix commands on Windows
+
+---
+
+**Bonus Interview Questions**
+
+Question: What is the difference between HEAD, working directory, and index?
+Answer:
+HEAD is the last committed snapshot.
+Working directory is your actual project files.
+Index (Staging area) is where files go before commit.
+
+Question: What is the difference between merge and rebase?
+Answer:
+Merge combines changes while preserving history.
+Rebase rewrites history to create a cleaner, linear commit path.
+
